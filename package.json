@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.15.0",
+    "@strapi/plugin-users-permissions": "4.15.0",
+    "@strapi/provider-upload-cloudinary": "^4.15.0",
+    "@strapi/strapi": "4.15.0",
+    "axios": "^1.6.7",
+    "crypto-js": "^4.2.0",
+    "form-data": "^4.0.0",
+    "geolib": "^3.3.4",
+    "mysql": "2.18.1",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4",
+    "strapi-plugin-i18n": "^3.6.11",
+    "strapi-plugin-io": "^2.0.6",
+    "strapi-plugin-populate-deep": "^3.0.1"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "f93557b4-130a-4701-a346-b295aa82f378"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=19.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

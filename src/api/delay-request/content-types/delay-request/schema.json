@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delay_requests",
+  "info": {
+    "singularName": "delay-request",
+    "pluralName": "delay-requests",
+    "displayName": "delay-request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reason": {
+      "type": "text"
+    },
+    "accepted": {
+      "type": "enumeration",
+      "enum": [
+        "pending ",
+        "true",
+        "false"
+      ],
+      "default": "pending "
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    },
+    "date": {
+      "type": "string"
+    }
+  }
+}

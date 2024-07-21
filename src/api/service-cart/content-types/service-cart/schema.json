@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_carts",
+  "info": {
+    "singularName": "service-cart",
+    "pluralName": "service-carts",
+    "displayName": "service-cart"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    },
+    "qty": {
+      "type": "integer",
+      "default": 1
+    }
+  }
+}

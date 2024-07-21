@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "singularName": "package",
+    "pluralName": "packages",
+    "displayName": "package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_ar": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {}
+    },
+    "price": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "content_ar": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "description_ar": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "poster_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {}
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "name_en": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "description_en": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "content_en": {
+      "pluginOptions": {},
+      "type": "string"
+    }
+  }
+}

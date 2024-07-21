@@ -1,0 +1,198 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "location_ar": {
+      "type": "string",
+      "required": true,
+      "default": "not provided"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "description": {
+      "type": "text"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::provider.provider"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "delayed",
+        "accepted",
+        "working",
+        "finish_work",
+        "assigned",
+        "finished",
+        "payment_required",
+        "payed",
+        "canceled"
+      ],
+      "default": "pending"
+    },
+    "PaymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "payment required",
+        "payed",
+        "refunded"
+      ],
+      "default": "pending"
+    },
+    "chat_channel_id": {
+      "type": "string"
+    },
+    "userOrderRating": {
+      "type": "string"
+    },
+    "userOrderReview": {
+      "type": "string"
+    },
+    "totalPrice": {
+      "type": "integer"
+    },
+    "googleMapLocation": {
+      "type": "json"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package"
+    },
+    "complain": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::complain.complain"
+    },
+    "provider_payment_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "payment_required",
+        "payed",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "additional_prices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::additional-price.additional-price"
+    },
+    "providerOrderReview": {
+      "type": "text"
+    },
+    "providerOrderRating": {
+      "type": "string"
+    },
+    "delay_request": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::delay-request.delay-request"
+    },
+    "service_carts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-cart.service-cart"
+    },
+    "provider_fee": {
+      "type": "integer"
+    },
+    "addtional_prices_state": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "category_id": {
+      "type": "integer"
+    },
+    "orderImages": {
+      "type": "json"
+    },
+    "order_cancel_reason": {
+      "type": "text"
+    },
+    "delay_order_by_user_reason": {
+      "type": "text"
+    },
+    "coupons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::coupon.coupon"
+    },
+    "visit_price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "payed_amount_with_wallet": {
+      "type": "decimal",
+      "default": 0
+    },
+    "payment_processes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment-process.payment-process"
+    },
+    "location_en": {
+      "type": "string"
+    },
+    "order_bill": {
+      "type": "string"
+    },
+    "spare_parts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::spare-part.spare-part"
+    },
+    "previous_providers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::provider.provider"
+    }
+  }
+}

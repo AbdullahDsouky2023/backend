@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "complains",
+  "info": {
+    "singularName": "complain",
+    "pluralName": "complains",
+    "displayName": "complain",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "message": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "replied",
+        "resolved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "complainImages": {
+      "type": "json"
+    },
+    "closingDate": {
+      "type": "datetime"
+    }
+  }
+}

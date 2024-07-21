@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "additional_prices",
+  "info": {
+    "singularName": "additional-price",
+    "pluralName": "additional-prices",
+    "displayName": "Additional_price"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "integer"
+    }
+  }
+}

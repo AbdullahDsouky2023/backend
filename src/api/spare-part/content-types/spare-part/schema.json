@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spare_parts",
+  "info": {
+    "singularName": "spare-part",
+    "pluralName": "spare-parts",
+    "displayName": "spare-part"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "text"
+    },
+    "bill_image": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}

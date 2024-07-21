@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_notifications_notifications",
+  "info": {
+    "displayName": "notifications",
+    "icon": "bell",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "data": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "other_services",
+  "info": {
+    "singularName": "other-service",
+    "pluralName": "other-services",
+    "displayName": "other-service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    }
+  }
+}

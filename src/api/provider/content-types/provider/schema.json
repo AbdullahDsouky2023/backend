@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providers",
+  "info": {
+    "singularName": "provider",
+    "pluralName": "providers",
+    "displayName": "provider",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": false
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "expoPushNotificationToken": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "city": {
+      "type": "string"
+    },
+    "Provider_status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "Additional_phone": {
+      "type": "string"
+    },
+    "wallet_amount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active"
+    },
+    "birth_date": {
+      "type": "date"
+    },
+    "googleMapLocation": {
+      "type": "json"
+    },
+    "Commercial_record": {
+      "type": "string"
+    },
+    "Personal_image": {
+      "type": "string"
+    },
+    "Personal_card": {
+      "type": "string"
+    },
+    "professional_licence": {
+      "type": "string"
+    },
+    "IdNumber": {
+      "type": "string"
+    },
+    "account_status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active"
+    },
+    "online": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "inactive"
+    },
+    "notifications": {
+      "type": "component",
+      "repeatable": true,
+      "component": "notifications.notifications"
+    }
+  }
+}
